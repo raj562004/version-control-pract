@@ -27,7 +27,7 @@ end
 class Stack
 
   def initialize
-    @top = nil   # top of stack
+    @top = nil   
   end
 
 
@@ -35,10 +35,10 @@ class Stack
 
     new_node = Node.new(value)
 
-    # new node points to current top
+    
     new_node.set_next(@top)
 
-    # update top
+    
     @top = new_node
   end
 
@@ -101,13 +101,13 @@ stack.push(20)
 stack.push(30)
 
 stack.display
-# 30 -> 20 -> 10 -> nil
+
 
 puts "Top element: #{stack.peek}"
 
 puts "Popped: #{stack.pop}"
 
 stack.display
-# 20 -> 10 -> nil
+
 
 puts "Is stack empty? #{stack.is_empty}"

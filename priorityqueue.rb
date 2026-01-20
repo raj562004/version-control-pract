@@ -27,7 +27,7 @@ end
 class PriorityQueue
 
   def initialize
-    @head = nil   # highest priority element always at head
+    @head = nil   
   end
 
 
@@ -35,7 +35,7 @@ class PriorityQueue
 
     new_node = Node.new(value, priority)
 
-    # if queue is empty OR new node has higher priority than head
+    
     if @head == nil || priority > @head.get_priority
       new_node.set_next(@head)
       @head = new_node
@@ -44,7 +44,7 @@ class PriorityQueue
 
     temp = @head
 
-    # find correct position
+    
     while temp.get_next != nil &&
           temp.get_next.get_priority >= priority
       temp = temp.get_next
@@ -117,12 +117,12 @@ pq.enqueue("Task C", 2)
 pq.enqueue("Task D", 3)
 
 pq.display
-# (Task B, priority 3) -> (Task D, priority 3) -> (Task C, priority 2) -> (Task A, priority 1) -> nil
+
 
 puts "Peek: #{pq.peek}"
 
 puts "Dequeued: #{pq.dequeue}"
 
 pq.display
-# (Task D, priority 3) -> (Task C, priority 2) -> (Task A, priority 1) -> nil
+
 

@@ -1,27 +1,27 @@
 class Node
 
-  # constructor
+  
   def initialize(data)
-    @data = data      # stores value
-    @next = nil       # stores reference to next node
+    @data = data      
+    @next = nil       
   end
 
-  # getter for data
+  
   def get_data
     @data
   end
 
-  # setter for data
+  
   def set_data(value)
     @data = value
   end
 
-  # getter for next
+  
   def get_next
     @next
   end
 
-  # setter for next
+  
   def set_next(node)
     @next = node
   end
@@ -31,7 +31,7 @@ end
 class LinkedList
 
   def initialize
-    @head = nil   # head of linked list
+    @head = nil   
   end
 
 
@@ -39,13 +39,13 @@ class LinkedList
 
     new_node = Node.new(value)
 
-    # if list is empty
+   
     if @head == nil
       @head = new_node
       return
     end
 
-    # traverse till last node
+   
     temp = @head
     while temp.get_next != nil
       temp = temp.get_next
@@ -80,7 +80,7 @@ class LinkedList
       return
     end
 
-    # delete head
+    
     if @head.get_data == value
       @head = @head.get_next
       return
@@ -141,16 +141,16 @@ list.insert_at_end(20)
 list.insert_at_end(30)
 
 list.display
-# 10 -> 20 -> 30 -> nil
+
 
 puts "Index of 20: #{list.search(20)}"
 
 list.delete(20)
 list.display
-# 10 -> 30 -> nil
+
 
 list.reverse
 list.display
-# 30 -> 10 -> nil
+
 
 

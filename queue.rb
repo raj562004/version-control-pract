@@ -27,8 +27,8 @@ end
 class Queue
 
   def initialize
-    @front = nil   # remove from here
-    @rear  = nil   # insert from here
+    @front = nil   
+    @rear  = nil   
 end
 
 
@@ -37,7 +37,7 @@ end
 
     new_node = Node.new(value)
 
-    # if queue is empty
+    
     if @rear == nil
       @front = new_node
       @rear  = new_node
@@ -66,7 +66,7 @@ end
     removed_value = @front.get_data
     @front = @front.get_next
 
-    # if queue becomes empty
+    
     if @front == nil
       @rear = nil
     end
@@ -116,14 +116,14 @@ queue.enqueue(20)
 queue.enqueue(30)
 
 queue.display
-# 10 -> 20 -> 30 -> nil
+
 
 puts "Front element: #{queue.peek}"
 
 puts "Dequeued: #{queue.dequeue}"
 
 queue.display
-# 20 -> 30 -> nil
+
 
 puts "Is queue empty? #{queue.is_empty}"
 
